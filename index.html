@@ -2,24 +2,51 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090909"><meta name="description" content="AL-ATTA GOLDEN STORE - متجر العطا الذهبي">
+<meta name="theme-color" content="#080808"><meta name="description" content="AL-ATTA GOLDEN STORE - متجر العطا الذهبي">
 <title>AL-ATTA GOLDEN STORE</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">A</span><span>AL-ATTA <b>GOLDEN STORE</b><small>متجر العطا الذهبي</small></span></a>
-<nav><a href="#products">المنتجات</a><a href="#about">عن المتجر</a><a href="login.html" id="accountLink">تسجيل الدخول</a><button class="cart-top" id="openCart"><i class="fas fa-shopping-bag"></i> السلة <span id="cartCount">0</span></button></nav>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-symbol"><i class="far fa-gem"></i><b></b></span><span class="brand-copy"><strong>متجر العطا <em>الذهبي</em></strong><small>AL-ATTA GOLDEN STORE</small></span></a>
+  <nav class="main-nav" aria-label="القائمة الرئيسية">
+    <a class="active" href="#">الرئيسية</a><a href="#products">التصنيفات</a><a href="#products">المنتجات</a><a href="#offers">العروض</a><a href="#about">المدونة</a><a href="#contact">تواصل معنا</a>
+  </nav>
+  <div class="header-actions">
+    <a href="login.html" aria-label="حسابي"><i class="far fa-user"></i></a><a href="#favorites" aria-label="المفضلة"><i class="far fa-heart"></i></a>
+    <button class="cart-icon" id="openCart" aria-label="سلة التسوق"><i class="fas fa-shopping-cart"></i><span id="cartCount">0</span></button>
+  </div>
+  <button class="mobile-menu" id="mobileMenu" aria-label="فتح القائمة"><i class="fas fa-bars"></i></button>
 </header>
 <main>
-<section class="hero"><div class="hero-copy"><span class="eyebrow">الفخامة في أدق التفاصيل</span><h1>اختار أناقتك<br><em>بلمسة ذهبية</em></h1><p>اكتشف تشكيلتنا المختارة من الإكسسوارات والساعات والمجوهرات.</p><a class="gold-btn" href="#products">تسوق الآن <i class="fas fa-arrow-left"></i></a></div><div class="hero-art"><div class="gold-ring"></div><span>AL-ATTA</span><small>GOLDEN COLLECTION</small></div></section>
-<section class="catalog" id="products"><div class="section-head"><div><span class="eyebrow">تشكيلتنا</span><h2>منتجات مختارة</h2></div><span class="muted" id="resultCount"></span></div>
-<div class="filters"><label class="search"><i class="fas fa-search"></i><input id="searchBox" placeholder="ابحث عن منتج أو فئة..."></label><select id="categoryFilter"><option value="all">كل الفئات</option><option>Watches</option><option>Necklace</option><option>Earrings</option><option>Rings</option><option>Bracelet</option></select></div>
-<div class="products" id="productsRow"></div>
+<section class="hero-banner">
+ <div class="hero-photo"><img src="https://raw.githubusercontent.com/Marwan1011994/project-js-4/main/imgs/accessories/2809f6567a8309c00022f8e273d8715c.jpg" alt="ساعة ذهبية أنيقة"></div>
+ <div class="hero-content"><span class="hero-kicker">تألّق يليق بك</span><h1>أجود المجوهرات والإكسسوارات<br><em>بأناقة ذهبية فريدة</em></h1><p>اكتشف تشكيلتنا المميزة من الساعات، السلاسل، الخواتم<br class="desktop-only"> والمزيد بأعلى جودة وأفضل الأسعار.</p><div class="hero-buttons"><a class="btn-gold" href="#products"><i class="fas fa-shopping-cart"></i> تسوق الآن</a><a class="btn-outline" href="#products"><i class="fas fa-play"></i> استكشف المنتجات</a></div></div>
+ <div class="gold-swoosh"></div>
 </section>
-<section class="about" id="about"><span class="eyebrow">AL-ATTA GOLDEN STORE</span><h2>أناقة تستحقها</h2><p>متجر العطا الذهبي — تجربة تسوق بسيطة بتصميم يجمع الأسود والذهبي.</p></section>
+<section class="category-grid" id="categories">
+ <a class="category-card" href="#products" data-category="Watches"><i class="far fa-clock"></i><strong>ساعات</strong></a>
+ <a class="category-card" href="#products" data-category="Necklace"><i class="fas fa-gem"></i><strong>سلاسل</strong></a>
+ <a class="category-card" href="#products" data-category="Rings"><i class="far fa-gem"></i><strong>خواتم</strong></a>
+ <a class="category-card" href="#products" data-category="Bracelet"><i class="fas fa-circle-notch"></i><strong>إكسسوارات</strong></a>
+</section>
+<section class="benefits" id="offers">
+ <div class="benefit"><i class="fas fa-headset"></i><span><b>دعم العملاء</b><small>متاح دائمًا</small></span></div>
+ <div class="benefit"><i class="fas fa-sync-alt"></i><span><b>إرجاع سهل</b><small>خلال 14 يوم</small></span></div>
+ <div class="benefit"><i class="fas fa-shield-alt"></i><span><b>جودة مضمونة</b><small>منتجات مختارة</small></span></div>
+ <div class="benefit"><i class="fas fa-truck"></i><span><b>شحن سريع</b><small>لجميع المحافظات</small></span></div>
+</section>
+<section class="catalog" id="products"><div class="section-head"><div><span class="eyebrow">تشكيلتنا المختارة</span><h2>اكتشف منتجاتنا</h2></div><span class="muted" id="resultCount"></span></div>
+<div class="filters"><label class="search"><i class="fas fa-search"></i><input id="searchBox" placeholder="ابحث عن منتج أو فئة..."></label><select id="categoryFilter"><option value="all">كل الفئات</option><option value="Watches">ساعات</option><option value="Necklace">سلاسل</option><option value="Earrings">أقراط</option><option value="Rings">خواتم</option><option value="Bracelet">إكسسوارات</option></select></div><div class="products" id="productsRow"></div>
+</section>
+<section class="about-section" id="about"><div class="about-photo"><img src="https://raw.githubusercontent.com/Marwan1011994/project-js-4/main/imgs/accessories/dd94301efd4caef4e84229be9a74bf90.jpg" alt="خاتم ذهبي"></div><div class="about-copy"><span class="eyebrow">AL-ATTA GOLDEN STORE</span><h2>عن متجر العطا الذهبي</h2><p>متجر العطا الذهبي هو وجهتك الأولى لاقتناء أجود المجوهرات والإكسسوارات العصرية، حيث نؤمن بأن الأناقة تكمن في التفاصيل.</p><a class="btn-outline" href="#contact">اعرف المزيد <i class="fas fa-chevron-left"></i></a></div><i class="about-watermark far fa-gem"></i></section>
 </main>
-<footer>© <span id="year"></span> AL-ATTA GOLDEN STORE — جميع الحقوق محفوظة</footer>
+<footer id="contact">© <span id="year"></span> AL-ATTA GOLDEN STORE — جميع الحقوق محفوظة</footer>
 <div class="overlay" id="overlay"></div><aside class="drawer" id="cartDrawer"><div class="drawer-head"><h3>سلة التسوق</h3><button id="closeCart" aria-label="إغلاق">×</button></div><div id="cartItems"></div><div class="drawer-foot"><div class="total">الإجمالي <strong id="totalPrice">$0</strong></div><p class="muted">هذه نسخة واجهة تجريبية؛ لا يوجد دفع إلكتروني مفعّل.</p></div></aside>
 <script src="js/app.js"></script>
+<script>
+document.querySelectorAll('.category-card').forEach(card=>card.addEventListener('click',()=>{const filter=document.getElementById('categoryFilter');if(filter){filter.value=card.dataset.category;filter.dispatchEvent(new Event('change'));}}));
+document.getElementById('mobileMenu')?.addEventListener('click',()=>document.querySelector('.main-nav')?.classList.toggle('open'));
+</script>
 </body></html>
